@@ -26,7 +26,11 @@
 
 
 def fibonacci(n: int) -> int:
-    pass
+    fib_1 = 1
+    fib_2 = 1
+    for item in range(n - 2):
+        fib_1, fib_2 = fib_2, fib_1 + fib_2
+    return fib_2
 
 
 if __name__ == '__main__':
