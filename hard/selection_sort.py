@@ -19,7 +19,13 @@
 
 
 def selection_sort(array: list) -> list:
-    pass
+    for i in range(len(array) - 1):
+        index_min = i
+        for j in range(i + 1, len(array)):
+            if array[j] < array[index_min]:
+                index_min = j
+        array[i], array[index_min] = array[index_min], array[i]
+    return array
 
 
 if __name__ == '__main__':
