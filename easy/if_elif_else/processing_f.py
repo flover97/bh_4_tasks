@@ -27,7 +27,15 @@ def processing_f(str_with_f: str) -> Union[int, str]:
     :return: строку или индекс
     :rtype: str
     """
-    result = None
+    if str_with_f.count('f') == 0:
+        str_with_f = str_with_f.swapcase()
+    elif str_with_f.count('f') == 1:
+        str_with_f = str_with_f.index('f')
+    elif str_with_f.count('f') == 2:
+        str_with_f = str_with_f.rindex('f')
+    elif str_with_f.count('f') > 2:
+        str_with_f = str_with_f[::-1]
+    result = str_with_f
     return result
 
 
