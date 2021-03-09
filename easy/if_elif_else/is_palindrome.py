@@ -25,7 +25,7 @@ def is_palindrome(check_str: str) -> bool:
     :return: True - палиндром, False - нет
     :rtype: bool
     """
-    result = check_str == check_str[::-1]
+    result = check_str.upper() == check_str.upper()[::-1]
     return result
 
 
